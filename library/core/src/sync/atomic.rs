@@ -2297,7 +2297,7 @@ macro_rules! atomic_int {
                 $int_type,
                 no = [
                     "**Note:** This function is only available on targets where `",
-                    stringify!($int_type), "` has an alignment of ", $align, " bytes."
+                    stringify!($int_type), "` has an alignment equal to its size."
                 ],
             }]
             ///
