@@ -2318,10 +2318,8 @@ pub fn exit(code: i32) -> ! {
 /// Terminates the process in an abnormal fashion.
 ///
 /// The function will never return and will immediately terminate the current
-/// process in a platform specific "abnormal" manner.
-///
-/// Note that because this function never returns, and that it terminates the
-/// process, no destructors on the current stack or any other thread's stack
+/// process in a platform specific "abnormal" manner. Therefore,
+/// no destructors on the current stack or any other thread's stack
 /// will be run.
 ///
 /// Rust IO buffers (eg, from `BufWriter`) will not be flushed.
